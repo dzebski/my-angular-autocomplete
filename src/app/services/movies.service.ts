@@ -12,7 +12,8 @@ export class MoviesService {
   query: string = 'mad max fury'
 
   constructor(public http: HttpClient) { }
-  getMovies(search: string): Observable<any> {
-    return this.http.get(this.endpoint + '?apikey=' + this.key + '&s=' + search + '&plott=full')
+  getMovies(search: string): Observable<Movie> {
+    return this.http.get<Movie>(this.endpoint + '?apikey=' + this.key + '&s=' + search + '&plott=full')
+
   }
 }

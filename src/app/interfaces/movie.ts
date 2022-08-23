@@ -1,10 +1,10 @@
 export interface Movie {
-  Search: SearchResults[]
+  Search: MoviesSearchResults[]
   totalResults: string
   Response: string
 }
 
-export interface SearchResults {
+export interface MoviesSearchResults {
   Poster: string
   Title: string
   Type: string

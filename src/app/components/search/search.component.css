@@ -6,3 +6,10 @@ label {
   margin-left: 0.4em;
   display: block;
 }
+
+.results {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+}
