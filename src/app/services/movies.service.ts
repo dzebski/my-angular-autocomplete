@@ -13,7 +13,6 @@ export class MoviesService {
 
   constructor(public http: HttpClient) { }
   getMovies(search: string): Observable<Movie> {
-    return this.http.get<Movie>(this.endpoint + '?apikey=' + this.key + '&s=' + search + '&plott=full')
-
+    return this.http.get<Movie>(this.endpoint + '?apikey=' + this.key + '&s=' + search.trim() + '&plott=full')
   }
 }
